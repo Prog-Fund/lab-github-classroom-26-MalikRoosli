@@ -32,6 +32,11 @@ class MessagePostTest {
         messagePost2.setMessage("Wait.. Wait..");
         assertEquals("Bye Bye", messagePost1.getMessage());
         assertEquals("Wait.. Wait..", messagePost2.getMessage());
-        //TODO  test when try to set a message that's too long
+
+        String longMessage = "This message is definitely longer than forty characters!";
+
+        messagePost1.setMessage(longMessage);
+
+        assertEquals("Bye Bye", messagePost1.getMessage());
     }
 }
